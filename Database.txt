@@ -1,3 +1,5 @@
+create database advice_app;
+
 create table if not exists users(
   id_user int primary key Auto_increment,
     firstname varchar(50),
@@ -5,5 +7,13 @@ create table if not exists users(
     genre char,
     email varchar(80),
     username varchar(50),
-    password varchar(100)
+    password varchar(100),
+    remember-token varchar(255) Default Null,
+    photo_profile blob
 ) engine=innodb;
+
+create table if not exists daily_advice (
+    id_advice int primary key,
+    advice TEXT Not Null,
+    created_at date Unique not null
+)engine=innodb;

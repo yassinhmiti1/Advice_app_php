@@ -1,6 +1,6 @@
 <?php 
 function Connexion(){
-  $server = "192.168.1.5";
+  $server = "192.168.1.7";
   $db = "advice_app";
   $user= "root";
   $psw = "root";
